@@ -5,9 +5,13 @@ import org.junit.jupiter.api.Test;
 public class HomeTest extends BaseTest {
 
     @Test
-    public void testAppLaunch() {
+    public void testAppFlow() {
 
-        System.out.println("App is launched successfully");
+        // onboarding
+        OnboardingPage onboardingPage = new OnboardingPage(driver);
+        onboardingPage.completeOnboarding();
 
+        // ovde ćemo kasnije login
+        System.out.println("Reached login screen");
     }
 }
