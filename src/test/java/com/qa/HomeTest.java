@@ -1,5 +1,6 @@
 package com.qa;
 
+import com.qa.utils.Config;
 import org.junit.jupiter.api.Test;
 
 public class HomeTest extends BaseTest {
@@ -7,11 +8,18 @@ public class HomeTest extends BaseTest {
     @Test
     public void testAppFlow() {
 
-        // onboarding
+        // ===== ONBOARDING =====
         OnboardingPage onboardingPage = new OnboardingPage(driver);
         onboardingPage.completeOnboarding();
 
-        // ovde ćemo kasnije login
-        System.out.println("Reached login screen");
+        // ===== LOGIN =====
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login(Config.EMAIL, Config.PASSWORD);
+
+        // ===== VALIDACIJA LOGIN-A (KLJUČNO) =====
+        loginPage.waitForLoginSuccess();
+
+        // ===== DEBUG =====
+        System.out.println("Login SUCCESS");
     }
 }
