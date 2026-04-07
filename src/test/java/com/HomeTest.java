@@ -1,6 +1,6 @@
-package com.qa;
+package com;
 
-import com.qa.utils.Config;
+import com.Config;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
