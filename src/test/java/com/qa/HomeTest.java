@@ -2,6 +2,7 @@ package com.qa;
 
 import com.qa.utils.Config;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HomeTest extends BaseTest {
 
@@ -21,5 +22,14 @@ public class HomeTest extends BaseTest {
 
         // ===== DEBUG =====
         System.out.println("Login SUCCESS");
+
+        // inicijalizacija homepage-a
+        HomePage homePage = new HomePage(driver);
+
+        // ASSERT da je homepage učitan
+        assertTrue(homePage.isSearchFieldVisible());
+
+        // ASSERT da je user ulogovan
+        assertTrue(homePage.isUserLoggedIn());
     }
 }
