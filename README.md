@@ -1,5 +1,7 @@
 # 📱 Mobile Automation Framework (Appium)
 
+![CI](https://github.com/RadovanovicSasha/halooglasi-mobile/actions/workflows/ci.yml/badge.svg)
+
 ## 🔧 Tech Stack
 - Java
 - Appium
