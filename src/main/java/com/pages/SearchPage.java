@@ -1,4 +1,4 @@
-package com;
+package com.pages;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
@@ -12,9 +12,9 @@ public class SearchPage extends BasePage {
     // ===== LOKATOR =====
 
     // pravi input za unos teksta (nakon što se klikne search na HomePage)
-    private By searchInput = By.className("android.widget.EditText");
+    private static final By searchInput = By.className("android.widget.EditText");
 
-    private By results = By.xpath("//android.widget.ImageView");
+    private static final By results = By.xpath("//android.widget.ImageView");
 
     // ===== METODE =====
 
